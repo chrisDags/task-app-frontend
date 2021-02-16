@@ -1,11 +1,17 @@
 .navbar-brand{
-    display: fixed;
-    padding-left: 47%;
+    display: relative;
+    font-size: xx-large;
     margin: 0 auto, 0 auto;
 }
 
+.navbar{
+    position: relative;
+}
+
+
+
 .myClass{
-    display: flexbox;
+    display: flex;
     font-size: large;
     color: #f0f8ff;
     margin: 0 auto, 0 auto;
@@ -14,12 +20,12 @@
 
 header {
     background-color: #282c34;
-    display: flex;
+    display: relative;
     justify-content: center;
     overflow-x: hidden;
   }
 
-body {
+/* body {
       overflow-x: hidden;
       margin: 0 auto;
-}
+} */
