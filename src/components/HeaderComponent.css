@@ -1,10 +1,14 @@
 .navbar-brand{
-    display: relative;
+    /* display: relative; */
     text-align: center;
     justify-content: center;
     padding-left: 48.3%;
 }
 
+.nav-link{
+    justify-content: end;
+    font-size: large;
+}
 
 header {
     background-color: #282c34;
@@ -15,6 +19,6 @@ header {
 
   }
 
-  body {
+body {
       overflow-x: hidden;
 }

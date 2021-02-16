@@ -12,7 +12,7 @@ class HeaderComponent extends Component{
         return(
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark mx-auto">
-                    <a href="https://github.com/chrisDags" className="navbar-brand"> Github </a>
+                    <a href="https://github.com/chrisDags" className="navbar-brand" style={{fontSize: '29px'}}> Github </a>
                     <ul className="navbar-nav">
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
