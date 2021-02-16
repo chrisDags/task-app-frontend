@@ -57,7 +57,6 @@ class AuthService {
     logout(){
         sessionStorage.removeItem('authenticatedUser')
     }
-
 }
 
 export default new AuthService();

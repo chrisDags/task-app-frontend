@@ -10,15 +10,15 @@ import './bootstrap.css'
 function App() {
   return (
     <div className="App">
-      <HashRouter>        
-        <HeaderComponent/>
-        <Switch>  
-          <Route path="/" exact component={LoginComponent}/>
+      <Router>        
+      <HeaderComponent/> 
+        <Switch> 
+          {/* <Route path="/" exact component={LoginComponent}/> */}
           <Route path="/login" component={LoginComponent}/>
           <AuthenticatedRoute path="/tasks" component={Tasks}/>
-          <AuthenticatedRoute path="" component={LoginComponent}/>
+          <Route path="" component={LoginComponent}/>
         </Switch>
-      </HashRouter>
+      </Router>
     </div>
   );
 }

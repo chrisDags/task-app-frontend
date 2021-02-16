@@ -1,14 +1,14 @@
-*{
+/* *{
     margin: 0;
-    padding: 0;
-}
+    padding: 0; 
+}  */
+
 
 .navbar-brand{
- 
-    display: relative;
+    display: absolute;
+    text-align: center;
     justify-content: center;
-    width: 100%;
-    left: 0;
+    padding-left: 48.3%;
 }
 
 
@@ -16,7 +16,6 @@ header {
     background-color: #282c34;
     position: relative;
     display: flex;
-
     justify-content: center;
     overflow-x: hidden;
 
