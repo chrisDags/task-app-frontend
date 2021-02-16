@@ -14,10 +14,9 @@ class LoginComponent extends Component{
             hasLoginFailed: false,
         }
         this.handleChange = this.handleChange.bind(this)
-        this.loginClicked = this.loginClicked.bind(this)
+        this.handleLogin = this.handleLogin.bind(this)
     }
     shouldComponentUpdate(nextProps, nextState){
-        //AuthService.logout()
         return true
     }
 
@@ -29,12 +28,18 @@ class LoginComponent extends Component{
 
 
     handleChange(event){
-        //event.preventDefault()
         this.setState({[event.target.name]: event.target.value})
     }
 
-    loginClicked(){
-        //event.preventDefault();
+
+    handleKeyPress = event => {
+        if (event.key === 'Enter') {
+            this.handleLogin()
+        }
+      };
+
+
+    handleLogin(){
         AuthService.executeJwtAuthenticationService(this.state.username, this.state.password)
             .then( response => {
                     AuthService.registerSuccessfulLoginForJwt(this.state.username, response.data.jwt);
@@ -42,19 +47,17 @@ class LoginComponent extends Component{
                 }).catch(() => {
                     this.setState({hasLoginFailed: true})
                 })
-    }
+    }  
     
     render(){
         return(
             <>
                 <h1>Login</h1>
                 {this.state.hasLoginFailed && <div className="alert alert-danger">Invalid Credentials</div>}
-                    <div >
-                    {/* <form onSubmit={this.loginClicked}> */}
-                        <div className="custom-div">Username: <input type ="text" name = "username" value = {this.state.username} onChange={this.handleChange}/></div>
-                        <div className="custom-div">Password: <input type ="password" name = "password" value ={this.state.password} onChange={this.handleChange}/></div>
-                        <div className="custom-div"><button className="btn btn-success" onClick={this.loginClicked}>Login</button></div>                    
-                    {/* </form> */}
+                <div >
+                    <div className="custom-div">Username: <input type ="text" name = "username" value = {this.state.username} onChange={this.handleChange} onKeyPress={this.handleKeyPress}/></div>
+                    <div className="custom-div">Password: <input type ="password" name = "password" value ={this.state.password} onChange={this.handleChange} onKeyPress={this.handleKeyPress}/></div>
+                    <div className="custom-div"><button className="btn btn-success" onClick={this.handleLogin} loading={this.state.load}>Login</button></div>                    
                 </div>
             </>
         )

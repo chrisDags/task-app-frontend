@@ -38,7 +38,6 @@ export default class Tasks extends Component{
     }
 
     componentWillUnmount(){
-        
     }
 
     componentDidMount(){
