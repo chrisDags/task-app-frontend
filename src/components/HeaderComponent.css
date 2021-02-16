@@ -3,22 +3,24 @@
     text-align: center;
     justify-content: center;
     padding-left: 49%;
+    margin: 0 auto;
 }
 
 .myClass{
-    justify-content: end;
+    display: relative;
+    padding-left: 760%;
     font-size: xx-large;
 }
 
 header {
     background-color: #282c34;
     position: relative;
-    display: flex;
     justify-content: center;
     overflow-x: hidden;
 
   }
 
-body {
+/* body {
       overflow-x: hidden;
-}
+      margin: 0 auto;
+} */
