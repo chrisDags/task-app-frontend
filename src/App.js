@@ -5,7 +5,7 @@ import Tasks from './components/Tasks';
 import {BrowserRouter as Router, HashRouter, Link, Route, Switch} from 'react-router-dom'
 import AuthenticatedRoute from './components/AuthenticatedRoute';
 import HeaderComponent from './components/HeaderComponent';
-import './bootstrap.css'
+// import './bootstrap.css'
 
 function App() {
   return (

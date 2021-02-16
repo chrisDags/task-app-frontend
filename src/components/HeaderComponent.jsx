@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import AuthService from './AuthService.js'
 import { withRouter } from 'react-router';
 import './HeaderComponent.css'
-import '../bootstrap.css'
+//  import '../bootstrap.css'
 
 class HeaderComponent extends Component{
     render(){
