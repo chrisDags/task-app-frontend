@@ -15,7 +15,7 @@ class HeaderComponent extends Component{
                     <a href="https://github.com/chrisDags" className="navbar-brand" style={{fontSize: '29px'}}> Github </a>
                     <ul className="navbar-nav">
                     </ul>
-                    <ul className="navbar-nav navbar-collapse justify-content-end">
+                    <ul className="navbar-nav navbar-collapse" style={{justifyContent: 'end'}}>
                         {(isUserLoggedIn) && <li><Link className="nav-link" onClick={AuthService.logout} to="/login" style={{color: 'white', justifyContent: 'end'}}>Logout</Link></li>}
                     </ul>
                 </nav>
