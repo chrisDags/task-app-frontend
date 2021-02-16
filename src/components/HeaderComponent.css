@@ -1,15 +1,18 @@
 .navbar-brand{
-    display: relative;
+    display:relative;
     text-align: center;
     justify-content: center;
     padding-left: 49%;
-    margin: 0 auto;
+    margin: 0 auto, 0 auto;
 }
 
 .myClass{
-    display: relative;
-    padding-left: 760%;
-    font-size: xx-large;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    padding-left: 1400%;
+    font-size: large;
+    color: aliceblue;
+    text-align: center;
 }
 
 header {
@@ -17,7 +20,6 @@ header {
     position: relative;
     justify-content: center;
     overflow-x: hidden;
-
   }
 
 /* body {
