@@ -1,23 +1,20 @@
 .navbar-brand{
-    display:relative;
-    text-align: center;
-    justify-content: center;
+    display: relative;
     padding-left: 49%;
     margin: 0 auto, 0 auto;
 }
 
 .myClass{
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    padding-left: 1400%;
+    display: absolute;
+    text-align: end;
     font-size: large;
     color: aliceblue;
-    text-align: center;
+    text-align: end;
 }
 
 header {
     background-color: #282c34;
-    position: relative;
+    display: flex;
     justify-content: center;
     overflow-x: hidden;
   }
