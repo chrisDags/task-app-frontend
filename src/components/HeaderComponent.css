@@ -6,10 +6,9 @@
 
 .myClass{
     display: absolute;
-    text-align: end;
     font-size: large;
     color: aliceblue;
-    text-align: end;
+    /* padding-left: 1000%; */
 }
 
 header {
