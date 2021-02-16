@@ -1,11 +1,5 @@
-/* *{
-    margin: 0;
-    padding: 0; 
-}  */
-
-
 .navbar-brand{
-    display: absolute;
+    display: relative;
     text-align: center;
     justify-content: center;
     padding-left: 48.3%;

@@ -12,12 +12,11 @@ class HeaderComponent extends Component{
         return(
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark mx-auto">
-                    <a href="https://github.com/chrisDags" className="navbar-brand" style={{fontSize: "25px"}}> Github </a>
+                    <a href="https://github.com/chrisDags" className="navbar-brand"> Github </a>
                     <ul className="navbar-nav">
                     </ul>
                     <ul className="navbar-nav navbar-collapse justify-content-end">
-                        {/* {!isUserLoggedIn && <li><Link className="nav-link" to="/login" style={{color: 'white'}}>Login</Link></li>} */}
-                        {(isUserLoggedIn) && <li><Link className="nav-link" onClick={AuthService.logout} to="/login" style={{color: 'white'}}>Logout</Link></li>}
+                        {(isUserLoggedIn) && <li><Link className="nav-link" onClick={AuthService.logout} to="/login" style={{color: 'white', justifyContent: 'end'}}>Logout</Link></li>}
                     </ul>
                 </nav>
             </header>
