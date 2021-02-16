@@ -1,13 +1,13 @@
 .navbar-brand{
-    /* display: relative; */
+    display: relative;
     text-align: center;
     justify-content: center;
-    padding-left: 48.3%;
+    padding-left: 49%;
 }
 
-.nav-link{
+.myClass{
     justify-content: end;
-    font-size: large;
+    font-size: xx-large;
 }
 
 header {
