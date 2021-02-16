@@ -17,14 +17,6 @@ export default class Tasks extends Component{
 
     }
 
-    // onBackButtonEvent = (e) => {
-    //     AuthService.logout()
-    //     //this.props.history.push('/login')
-    //     //console.log("swag")
-    //     //this.props.history.push('/login')
-    //     //window.location.reload()
-    //   }
-
     constructor(props){
         super(props);
         this.state = {
@@ -51,7 +43,6 @@ export default class Tasks extends Component{
 
     componentDidMount(){
         this.getData();
-        //window.onpopstate = this.onBackButtonEvent;
     }
 
     render(){

@@ -9,7 +9,7 @@ class AuthService {
         let headers = {
             "Content-Type": "application/json"
         };  
-        return axios.post("http://localhost:8080/authenticate",{
+        return axios.post("https://task-app-dags-backend.herokuapp.com/authenticate",{
             username,
             password
         }, headers)
@@ -51,7 +51,7 @@ class AuthService {
     // todo: Move methods related to CRUD operations on Tasks to a service
     getAllTasks(username){
        let token = sessionStorage.getItem('token')
-       return axios.get(`http://localhost:8080/api/tasks`, {headers: {"Authorization": `${token}`}})
+       return axios.get(`https://task-app-dags-backend.herokuapp.com/api/tasks`, {headers: {"Authorization": `${token}`}})
     }
 
     logout(){
