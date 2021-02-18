@@ -1,4 +1,4 @@
-.navbar-brand{
+/* .navbar-brand{
     display: relative;
     font-size: xx-large;
     margin: 0 auto, 0 auto;
@@ -15,8 +15,9 @@
     font-size: large;
     color: #f0f8ff;
     margin: 0 auto, 0 auto;
-    /* padding-left: 1000%; */
-}
+    /* padding-left: 1000%; 
+} 
+*/
 
 header {
     background-color: #282c34;

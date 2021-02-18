@@ -2,8 +2,20 @@ import React from 'react'
 import axios from 'axios';
 import AuthService from './AuthService';
 import { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import the library
+// import { library } from '@fortawesome/fontawesome-svg-core';
+
+// import your icons
+import { faAngry, faBan, faBarcode, faCode, faCross, faEdit, faHighlighter, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
+// import {useHistory} from 'react-router-dom'
+// import { Button } from 'bootstrap';
 
 export default class Tasks extends Component{
+   
+   
     getData(){
 
        this.setState({data: []})
@@ -30,14 +42,25 @@ export default class Tasks extends Component{
     }
 
     componentDidUpdate(){
-        window.onpopstate = e => {
-            AuthService.logout()
-            this.props.history.push("/login")
+        // window.onpopstate = e => {
+
+        //     this.props.history.push("/login")
+        //     // this.props.history.replace("/login")
+        //     //AuthService.logout()
+        //     //this.props.history.push("/login")
+        //     // this.props.history.replace("/login")
         
-        }
+        // }
     }
 
     componentWillUnmount(){
+        // window.onpopstate = e => {
+        //     //this.props.history.replace("/login")
+        //     //AuthService.logout()
+        //     //this.props.history.push("/login")
+        //     // this.props.history.replace("/login")
+        
+        // }
     }
 
     componentDidMount(){
@@ -59,6 +82,8 @@ export default class Tasks extends Component{
                                 <th>#</th>
                                 <th>NAME</th>
                                 <th>DESCRIPTION</th>
+                                <th>DATE</th>
+                                <th></th>                          
                             </tr>
                         </thead>
                         <tbody>
@@ -69,11 +94,18 @@ export default class Tasks extends Component{
                                                 <td>{id = id + 1}</td>
                                                 <td>{task.name}</td>
                                                 <td>{task.description}</td>
+                                                <td>{moment(task.dateCreated).format("DD-MM-YYYY")}</td>
+                                               
+                                                <Link className="nav-link" style={{float:"left"}} to={`/task/${id}`}><FontAwesomeIcon icon={faEdit} transform="down-4 grow-2.5"/></Link>                                           
+                                                <Link className="nav-link" to={'/tasks'}><FontAwesomeIcon icon={faSkullCrossbones} transform="down-4 grow-2.5" color="darkRed"/></Link>
+                                                                                              
                                             </tr>
                                 )
                             }
                         </tbody>
                     </table>
+                    <button className="btn btn-dark">Create New Task</button>
+                    
                 </div>
             </div>
 

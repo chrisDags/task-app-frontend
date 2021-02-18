@@ -17,7 +17,8 @@ class HeaderComponent extends Component{
                     <ul className="navbar-nav">
                     </ul>
                     <ul className="navbar-nav navbar-collapse">
-                        {(isUserLoggedIn) && <div><li><Link className="nav-link" style={{ position:'absolute', left:'90%', top:'25%',color:'white', fontSize:'20px'}}onClick={AuthService.logout} to="/login">Logout</Link></li></div>}
+                        {(isUserLoggedIn) && <div><li><Link className="nav-link" style={{ position:'absolute', left:'87%', top:'25%',color:'white', fontSize:'20px'}}onClick={AuthService.logout} to="/login">Logout</Link></li></div>}
+                        {isUserLoggedIn && <li><Link className="nav-link" style={{ position:'absolute', left:'47%', top:'25%',color:'white', fontSize:'20px'}}to="/tasks">Task List</Link></li>}
                     </ul>
                 </nav>
             </header>
